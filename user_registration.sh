@@ -24,3 +24,10 @@ then
 else
    echo "invalid email" 
 fi
+read -p "enter mobile number with country code" m_num
+if [[ $m_num =~ ^[0-9]{1,2}[' '][0-9]{4,} ]]
+then
+	echo "valid mobile number"
+else
+	echo "invalid mobile  number"
+fi
