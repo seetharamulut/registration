@@ -32,7 +32,7 @@ else
 	echo "invalid mobile  number"
 fi
 read -p "enter a password" password
-if [[ ${#password} -gt 8 ]]
+if [[ ${#password} -gt 8 && $password == [[:upper:]] ]]
 then 
 	echo "valid"
 else
