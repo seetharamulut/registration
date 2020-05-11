@@ -1,4 +1,4 @@
-#! /bin/bash 
+#! /bin/bash -x
 read -p "enter first name  : " first_name
 
 if [[ $first_name =~ ^([[:upper:]][[:lower:]]+)+$ ]]
@@ -32,7 +32,7 @@ else
 	echo "invalid mobile  number"
 fi
 read -p "enter a password" password
-if [[ ${#password} -gt 8 && $password == [[:upper:]] && $password == [[:lower:]] && $password == [0-9] ]]
+if [[ ${#password} -gt 8 && $password == [[:upper:]] && $password == [[:lower:]] && $password == [0-9] && $password =~ [@#%^.,/] ]]
 then 
 	echo "valid"
 else
